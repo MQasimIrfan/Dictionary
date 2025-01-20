@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,800;1,300&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #042ad8;
+  background-image: url('../src/Cover.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: 'Pacifico', cursive;
+  color: #ffffff;
+  margin-top: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  text-decoration: underline;
+  padding-bottom: 20px;
+}
+
+h4 {
+  color: #4DB33D;
+}
+
+input {
+  width: 100%;
+  max-width: 400px;
+  height: 46px;
+  font-size: 18px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBox > button {
+  background-color: #101110;
+  height: 46px;
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+}
+
+.showResults {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.partOfSpeechText,
+.definitionText,
+.exampleText {
+  color: #f3f0f0;
+}
+
+.partOfSpeech,
+.definition,
+.example {
+  color: #010003;
+}
+
+.showResults > h2 > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.historyAndFavorites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  gap: 20px; 
+}
+
+.history,
+.favorites {
+  flex: 1 1 calc(50% - 20px); 
+  max-width: 400px; 
+  background-color: rgba(33, 37, 41, 255);
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+}
+
+.history h3,
+.favorites h3 {
+  margin-top: 0;
+}
+
+.history ul,
+.favorites ul {
+  padding-left: 20px;
+  list-style-type: none; /* Remove default list style */
+}
+
+.history li,
+.favorites li {
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: #4DB33D;
+  transition: color 0.3s ease;
+}
+
+.history li:hover,
+.favorites li:hover {
+  color: white;
+}
+
+.card {
+  background-color: rgba(33, 37, 41, 255);
+  color: white;
+  padding: 20px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.searchResultCard {
+  background-color: #051f94;
+  color: rgb(253, 250, 250);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  input {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .searchBox > button {
+    height: 40px;
+    width: 50px;
+  }
+
+  .historyAndFavorites {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .history,
+  .favorites {
+    width: 100%;
+    max-width: none; 
+  }
+
+  .searchResultCard,
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  input {
+    flex:1 ;
+    max-width: none;
+  }
+
+  .searchBox {
+  display: flex;
+  align-items: center;
+}
+
+  .searchBox > button {
+  background-color: #101110;
+  height: 46px;
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  transform: translateY(-5px); 
+}
+
+  .history li,
+  .favorites li {
+    font-size: 14px;
+  }
+}
